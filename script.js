@@ -11,12 +11,23 @@ $(document).ready(function() {
     // This function should return true if the input word starts with a vowel,
     // otherwise it should return false.
     function wordStartsWithVowel(word) {
-
+        //checks for vowel
+        if (input.charAt(0) === "a" || input.charAt(0) === "e" || input.charAt(0) === "i" ||
+            input.charAt(0) === "o" || input.charAt(0) === "u" ) {
+                return(true);
+            } else {
+                return(false);
+            }
     }
 
     // Appends "yay" to the end of the word and returns the word.
     function appendYayToWord(word) {
-
+        if(wordStartsWithVowel === true) {
+            $(input).append("yay");
+            return(input);
+        } else {
+            //nothing
+        }
     }
 
     // Moves the first consonant to the end of the word, appends "ay" to the end of the word,
