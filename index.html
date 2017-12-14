@@ -4,18 +4,42 @@
         <meta charset="utf-8" />
         <title>Pig Latinizer</title>
         <!-- Bootstrap -->
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" 
+    crossorigin="anonymous">
 
         <!-- Your CSS -->
-        
+        <link rel="stylesheet" href="css/style.css">
 
         <!-- JQuery -->
-       
+       <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
         <!-- Your Javascript-->
+         <script src="script.js"></script>
     </head>
 
     <body>
-       
+       <div class="container">
+           <div class="row">
+                <div class="col-sm-12">
+                    <h1 id="title">Pig Latinizer</h1>  
+                </div>
+           </div>     
+           <div class="row">
+                <div class="col-sm-12">
+                    <p id="instruction">Please input something so you can Pig Latinize it.</p>
+                    <input placeholder="Add Something">
+                    <button>Translate</button>
+                </div>
+           </div>
+           <div class="row">
+                <div class="col-sm-12">
+                    <p id="result_title">Result</p>
+                    <div class="col-sm-6">
+                        <p id="result">Result</p>
+                    </div>
+                </div>
+           </div>
+       </div>
     </body>
 </html>

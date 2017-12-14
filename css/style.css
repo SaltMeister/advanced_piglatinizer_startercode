@@ -1,0 +1,59 @@
+.col-sm-1 {
+    background-color:OrangeRed;
+    border: solid;
+}
+
+.col-sm-2 {
+    background-color:SteelBlue  ;
+    border: solid;
+}
+
+.col-sm-3 {
+    background-color:black ;
+    border: solid;
+}
+
+.col-sm-4 {
+    background-color:LightYellow ;
+    border: solid;
+}
+
+.col-sm-5 {
+    background-color:blue;
+    border: solid;
+}
+
+.col-sm-6 {
+    background-color: LightSalmon ;
+    border: solid;
+}
+
+.col-sm-7 {
+    background-color: brown;
+    border: solid;
+}
+
+.col-sm-8 {
+    background-color:LightSeaGreen ;
+    border: solid;
+}
+
+.col-sm-9 {
+    background-color:black;
+    border: solid;
+}
+
+.col-sm-10 {
+    background-color:brown;
+    border: solid;
+}
+
+.col-sm-11 {
+    background-color:white;
+    border: solid;
+}
+
+.col-sm-12 {
+    background-color:pink;
+    border: solid;
+}
