@@ -41,7 +41,15 @@ $(document).ready(function() {
     function convertWordToPigLatin(word) {
 
     }
-
+    $("button").click(function() {
+        var input = $("input").val();
+        console.log(input)
+        if(wordStartsWithVowel === true) {
+            appendYayToWord(input);
+        } else {
+            
+        }
+    });
     // Create a click handler that takes is triggered when the user clicks the translate button.
         // Gets a word from the input box
         // Transforms the word to pig latin

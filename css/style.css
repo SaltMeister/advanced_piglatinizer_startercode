@@ -59,6 +59,7 @@
 }
 #title {
     text-align: center;
+    font-family: tahoma;
 }
 #instruction {
     text-align: center;
@@ -68,4 +69,15 @@
 input {
     text-align: center;
     padding: 3px;
+}
+#main_div {
+    text-align: center;
+}
+#result_title, #result_div {
+    text-align: center;
+    font-size: 25px;
+    font-family: tahoma;
+}
+#result_div {
+    margin: auto;
 }
