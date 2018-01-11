@@ -12,8 +12,8 @@ $(document).ready(function() {
     // otherwise it should return false.
     function wordStartsWithVowel(word) {
         //checks for vowel
-        if (input.charAt(0) === "a" || input.charAt(0) === "e" || input.charAt(0) === "i" ||
-            input.charAt(0) === "o" || input.charAt(0) === "u" ) {
+        if (word.charAt(0) === "a" || word.charAt(0) === "e" || word.charAt(0) === "i" ||
+            word.charAt(0) === "o" || word.charAt(0) === "u" ) {
                 return(true);
             } else {
                 return(false);
@@ -22,9 +22,9 @@ $(document).ready(function() {
 
     // Appends "yay" to the end of the word and returns the word.
     function appendYayToWord(word) {
-        if(wordStartsWithVowel === true) {
-            $(input).append("yay");
-            return(input);
+        if(wordStartsWithVowel(word) === true) {
+              //changes the result html with the result
+              return $("#result_text").text(word + "yay");
         } else {
             //nothing
         }
@@ -33,22 +33,27 @@ $(document).ready(function() {
     // Moves the first consonant to the end of the word, appends "ay" to the end of the word,
     // and returns the word.
     function convertWordWithConsonant(word) {
-
+                if(wordStartsWithVowel(word) === false) {
+                    //takes the first letter away and puts it at the end of the word and adds ay after it
+                    return $("#result_text").text(word.substring(1) + word.charAt(0) + "ay");
+                } else {
+                    //nothing
+                }
     }
 
     // If the word starts with a vowel, return the result of appendYayToWord.
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(word) {
-
+                if(wordStartsWithVowel(word) === true){
+                    return appendYayToWord(word);
+                } else {
+                    return convertWordWithConsonant(word);
+                }
     }
     $("button").click(function() {
         var input = $("input").val();
-        console.log(input)
-        if(wordStartsWithVowel === true) {
-            appendYayToWord(input);
-        } else {
-            
-        }
+        var testResult = convertWordToPigLatin(input);
+        console.log(testResult);
     });
     // Create a click handler that takes is triggered when the user clicks the translate button.
         // Gets a word from the input box
