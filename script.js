@@ -24,7 +24,7 @@ $(document).ready(function() {
     function appendYayToWord(word) {
         if(wordStartsWithVowel(word) === true) {
               //changes the result html with the result
-              return $("#result_text").text(word + "yay");
+              return word + "yay";
         } else {
             //nothing
         }
@@ -35,12 +35,20 @@ $(document).ready(function() {
     function convertWordWithConsonant(word) {
                 if(wordStartsWithVowel(word) === false) {
                     //takes the first letter away and puts it at the end of the word and adds ay after it
-                    return $("#result_text").text(word.substring(1) + word.charAt(0) + "ay");
+                    return word.substring(1) + word.charAt(0) + "ay";
                 } else {
                     //nothing
                 }
     }
-
+    //Function that pig lataninizes a sentence
+    function convertSentenceToPigLatin(word) {
+        var array = word.split(" ");
+      
+        for(var i = 0; i < array.length; i = i + 1) {
+            convertWordToPigLatin(array[i]);
+        return (convertWordToPigLatin(array[i]));
+        }
+    }
     // If the word starts with a vowel, return the result of appendYayToWord.
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(word) {
@@ -52,7 +60,7 @@ $(document).ready(function() {
     }
     $("button").click(function() {
         var input = $("input").val();
-        var testResult = convertWordToPigLatin(input);
+        var testResult = convertSentenceToPigLatin(input);
         console.log(testResult);
     });
     // Create a click handler that takes is triggered when the user clicks the translate button.
