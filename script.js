@@ -46,7 +46,7 @@ $(document).ready(function() {
       
         for(var i = 0; i < array.length; i = i + 1) {
             convertWordToPigLatin(array[i]);
-        return (convertWordToPigLatin(array[i]));
+        console.log(convertWordToPigLatin(array[i]));
         }
     }
     // If the word starts with a vowel, return the result of appendYayToWord.
