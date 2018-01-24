@@ -45,8 +45,8 @@ $(document).ready(function() {
         var array = word.split(" ");
       
         for(var i = 0; i < array.length; i = i + 1) {
-            convertWordToPigLatin(array[i]);
-        console.log(convertWordToPigLatin(array[i]));
+            $("#result_text").append(" " + convertWordToPigLatin(array[i]));
+            console.log(convertWordToPigLatin(array[i]));
         }
     }
     // If the word starts with a vowel, return the result of appendYayToWord.
@@ -59,6 +59,7 @@ $(document).ready(function() {
                 }
     }
     $("button").click(function() {
+        $("#result_text").text(" ");
         var input = $("input").val();
         var testResult = convertSentenceToPigLatin(input);
         console.log(testResult);
